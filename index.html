@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <title>Nexa Text Extractor</title>
+    <link rel="icon" type="image/svg+xml" href="nexa-icon.svg">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    
+    <header class="header">
+      <button id="themeToggle" class="theme-btn">🌙</button>
+      <h2>Nexa Text Extractor</h2>
+    </header>
+
+    <div id="preview" class="preview">
+      <small>اسحب الصورة هنا أو للصق اضغط Ctrl + V</small>
+    </div>
+
+    <div id="loader" class="loader">⏳ جاري قراءة النص...</div>
+
+    <textarea 
+      id="result" 
+      readonly 
+      placeholder="النص المستخرج من الصورة">
+    </textarea>
+
+    <div class="actions">
+        <button class="btn btn-primary" id="copy">
+        📋 Copy
+        </button>
+        <button class="btn btn-success" id="translate">
+        🌍 Translate
+        </button>
+    </div>
+
+    <div id="ordersBox" class="orders hidden">
+      <h4>📌 أرقام مكتشفة</h4>
+      <div id="orders"></div>
+    </div>
+
+  </div>
+</body>
+</html>
